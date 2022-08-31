@@ -1,0 +1,22 @@
+<%= form_for @student do |f| %>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %><br>
+    <br>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %><br>
+    <br>
+    <%= f.label :DOB %><br>
+    <%= f.date_field :dob %><br>
+    <br>
+    <%= f.label :contact %><br>
+    <%= f.number_field :contact%>
+    <br>
+    <%= f.label :course %><br>
+    <%= f.text_field :course%>
+    <br>
+    <%= f.label :address %><br>
+    <%= f.text_field :address%>
+    <br>
+
+    <%= f.submit %>
+<% end %> 

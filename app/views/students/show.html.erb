@@ -1,0 +1,31 @@
+<%= link_to "Students list", students_path %>
+
+<h1> Student Profile </h1>
+<div> 
+    <p>First Name: </p>
+    <%= @student.first_name %>
+    <br>
+    <p>Last Name: </p>
+    <%= @student.last_name %>
+    <br>
+    <p>Date of birth: </p>
+    <%= @student.dob %>
+    <br>
+    <p>Contact Number: </p>
+    <%= @student.contact %>
+    <br>
+    <p>Course: </p>
+    <%= @student.course %>
+    <br>
+    <p>Address: </p>
+    <%= @student.address %>
+    <br>
+</div>
+<br>
+<%= link_to "Account Details", new_student_account_path(@student) %><br>
+
+<br>
+
+<%= link_to "Edit Student", edit_student_path(@student) %><br>
+<br>
+<%= link_to "Delete Student", student_path(@student), method: :delete, data:{ confirm: "Are you sure?" } %>
