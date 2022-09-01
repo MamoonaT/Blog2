@@ -1,8 +1,11 @@
 class StudentsController < ApplicationController
   before_action :find_student, only: [:show, :edit, :update, :destroy]
 
+
   def index
     @students = Student.all.order("created_at DESC")
+    authorize @students
+
   end
 
   def new
@@ -19,9 +22,9 @@ class StudentsController < ApplicationController
     end
   end
 
-  def show;  end
+  def show; end
 
-  def edit;  end
+  def edit; end
   
   def update
     if @student.update(student_params)
