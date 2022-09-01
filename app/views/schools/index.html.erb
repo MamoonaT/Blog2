@@ -1,12 +1,17 @@
 <h1> Welcome</h1>
 <h1> Educational Institute </h1>
 <div>
-     Our goal is to educate everyone!
+  Our goal is to educate everyone!
 </div>
 <br>
 
 <%= link_to "See Students", students_path %><br>
-<%= link_to "Sign_Out", destroy_user_session_path, method: :delete %>
 
 
 
+<% if user_signed_in? %>
+  <%= link_to "Sign_Out", destroy_user_session_path, method: :delete %>
+<% else %>
+	<%= link_to "Sign_In", new_user_session_path %>
+
+<% end %>
